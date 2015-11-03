@@ -1,0 +1,17 @@
+PSP. PRACTICA 0 
+
+Hacer un programa en el entorno netbeens y java. utilizamos una máquina virtual en ubuntu.
+
+Especificaciones del programa.
+
+1) Debemos de definir las clases y métodos que nos hagan falta. Almenos una clase creada por nosotros y un método.
+2) No es necesario utilizar entorno gráfico.
+3) Pintar el nombre del alumno, en la parte superior de la pantalla, que se quede centrado, no ajustado a la izquierda.
+4) Preguntar por la introducción de una tira, que se introduce desde el teclado y tiene que ajustarse a la izquierda. Admite cualquier carácter alfanumérico del teclado la llamamos (tira_alfa).
+5) Desde la pregunta para llenar tira_alfa podemos salir del programa o introducir los carácteres.
+6) Filtramos la tira_alfa y obtenemos dos tiras una con los números y otra con el resto de caracteres, serán tira_num y tira_resto.
+7) Presentamos en pantalla las dos tiras y el resultado de sumar todos los números. 
+8) preguntamos si quieres salir o seguir introduciendo otra tira_alfa.
+
+Presentar en un documento el código fuente del programa y subirlo al curso moodle en la práctica 0.
+
