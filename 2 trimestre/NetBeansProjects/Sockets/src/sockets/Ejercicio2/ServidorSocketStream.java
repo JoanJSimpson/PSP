@@ -23,19 +23,20 @@ public class ServidorSocketStream {
             int con =1;
             
             boolean terminado = false;
+            //====================================================
+            //Creamos socket Servidor y aceptamos conexiones
+            //====================================================
             System.out.println("Esperando conexiones");
+            System.out.println("Creando socket servidor");
+            ServerSocket serverSocket = new ServerSocket();
             
+            System.out.println("Realizando el bind");
+            InetSocketAddress addr = new InetSocketAddress("localhost", 6666);
+            serverSocket.bind(addr);
+            System.out.println("Aceptando conexiones");
+            
+            //Hasta que no llegue el mensaje de cierre de conexion (Salir.)
             while(!terminado){
-                System.out.println("Creando socket servidor");
-            
-                ServerSocket serverSocket = new ServerSocket();
-
-                System.out.println("Realizando el bind");
-
-                InetSocketAddress addr = new InetSocketAddress("localhost", 6666);
-                serverSocket.bind(addr);
-
-                System.out.println("Aceptando conexiones");
 
                 Socket newSocket = serverSocket.accept();
 
@@ -79,7 +80,7 @@ public class ServidorSocketStream {
                 }else if(pregunta.equals("¿Cuantas lineas de codigo tienes?".toLowerCase()) || pregunta.equals("¿Cuántas líneas de código tienes?".toLowerCase())
                          || pregunta.equals("Cuántas líneas de código tienes?".toLowerCase()) || pregunta.equals("Cuantas lineas de codigo tienes?".toLowerCase())       ){
                     //System.out.println("Tengo 65 líneas de codigo");
-                    respuesta = "Tengo 103 líneas de codigo.";
+                    respuesta = "Tengo 110 líneas de codigo.";
                     //os.write(respuesta.getBytes());
                 }else if(pregunta.equals("¿Quien es Miguelula?".toLowerCase()) || pregunta.equals("¿Quién es Miguelula?".toLowerCase())
                          || pregunta.equals("Quién es Miguelula?".toLowerCase())  || pregunta.equals("Quien es Miguelula?".toLowerCase())){
@@ -96,17 +97,14 @@ public class ServidorSocketStream {
                 con++;
                 System.out.println("");
                 
-                
                 newSocket.close();
-                serverSocket.close();
-            
             }
             System.out.println("Terminado");
-                    
-         
+            //Cerramos el serverSocket
+            serverSocket.close();
+            
         }catch (IOException e){
             e.printStackTrace();
         }
     }
-    
 }

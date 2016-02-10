@@ -41,10 +41,10 @@ public class ClienteSocketStream {
             
             while(!terminado){
                 
-            //System.out.println("Creando Socket Cliente");
+                //reando Socket Cliente
                 Socket clientSocket = new Socket();
 
-                //System.out.println("Estableciendo la conexion");
+                //Estableciendo la conexion
                 InetSocketAddress addr = new InetSocketAddress("localhost", 6666);
                 clientSocket.connect(addr);
 
